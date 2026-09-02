@@ -1,0 +1,51 @@
+# This repository is the PUBLIC face of RawFrame. It holds the README, the licence and
+# screenshots — nothing else. The source code is private and must never be added here,
+# so the entries below are a second line of defence behind that rule: even if a file is
+# copied into this folder by accident, git will not offer to commit it.
+#
+# Once something is pushed it stays in the repository's history even after a later commit
+# deletes it, so the only reliable place to stop a mistake is here.
+
+## The published binary
+# RawFrame.exe belongs on the Releases page as an attachment, not in git. It is about
+# 70 MB: committed once, every clone of this repository carries it forever, and GitHub
+# starts warning past 50 MB. Releases have none of those problems and a 2 GB limit.
+*.exe
+*.zip
+*.7z
+*.msi
+
+## Source code, in case a copy is ever dropped in here
+# Nothing in this repository is ever built, so none of this belongs in it.
+src/
+tests/
+tools/
+*.cs
+*.csproj
+*.sln
+*.xaml
+*.manifest
+*.pubxml
+
+## The private build notes
+# docs/ itself is left available for screenshots; only the internal document is blocked.
+docs/BUILD.md
+
+## .NET build output
+bin/
+obj/
+publish/
+*.dll
+*.pdb
+*.cache
+
+## Recordings and logs, which are personal
+*.mp4
+*.log
+
+## Windows and editor noise
+Thumbs.db
+desktop.ini
+.vs/
+*.user
+*.suo
